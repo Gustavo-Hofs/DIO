@@ -7,8 +7,8 @@ menu = """
 
 => """
 
-saldo = 0
-LIMITE_POR_SAQUE = 500
+saldo = 0.0
+LIMITE_POR_SAQUE = 500.0
 extrato = ""
 numero_saques = 0
 LIMITE_SAQUES = 3
@@ -25,6 +25,8 @@ while True:
 
     elif opcao == "e":
         print("Extrato.")
+        extrato = "{:0.2f}".format(saldo)
+        print(f"O valor atual em saldo: R$ {extrato}")
         
     elif opcao == "q":
         print("Saindo.")
